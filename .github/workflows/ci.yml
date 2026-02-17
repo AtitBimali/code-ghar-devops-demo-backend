@@ -40,7 +40,7 @@ jobs:
             ${{ env.IMAGE_NAME }}:${{ env.RUN_NUMBER }}
             ${{ env.IMAGE_NAME }}:latest
       
-      # - name: Trigger Jenkins
-      #   run: |
-      #     curl -X POST "https://jenkinsurl/YOUR_JOB_NAME/build?token=${{ secrets.JENKINS_TOKEN }}"
+      - name: Trigger Jenkins
+        run: |
+          curl -X POST " https://lita-antonymous-kathleen.ngrok-free.dev/job/backend/build?token=${{ secrets.JENKINS_TOKEN }}"
 
