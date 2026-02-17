@@ -42,5 +42,5 @@ jobs:
       
       - name: Trigger Jenkins
         run: |
-          curl -X POST " https://lita-antonymous-kathleen.ngrok-free.dev/job/backend/build?token=${{ secrets.JENKINS_TOKEN }}"
+          curl -X POST "https://lita-antonymous-kathleen.ngrok-free.dev/job/backend/build?token=${{ secrets.JENKINS_TOKEN }}"
 
