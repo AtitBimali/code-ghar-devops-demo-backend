@@ -42,6 +42,7 @@ def toggle_todo(todo_id: int, db: Session = Depends(get_db)):
     db.commit()
     return todo
 
+# Delete a todo item
 @app.delete("/todos/{todo_id}")
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     todo = db.query(Todo).get(todo_id)
