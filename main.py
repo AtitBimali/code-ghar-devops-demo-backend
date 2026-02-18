@@ -49,3 +49,5 @@ def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     db.delete(todo)
     db.commit()
     return {"ok": True}
+
+#small change to test jenkins trigger
