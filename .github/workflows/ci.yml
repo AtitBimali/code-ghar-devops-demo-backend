@@ -41,6 +41,7 @@ jobs:
             ${{ env.IMAGE_NAME }}:latest
       
       - name: Trigger Jenkins
+        if: success()
         run: |
-          curl -X POST "https://lita-antonymous-kathleen.ngrok-free.dev/job/backend/build?token=${{ secrets.JENKINS_TOKEN }}"
-
+          curl -u "${{ secrets.JENKINS_USER }}:${{ secrets.JENKINS_API_TOKEN }}" \
+            -X POST "https://lita-antonymous-kathleen.ngrok-free.dev/job/backend/build?token=${{ secrets.JENKINS_TOKEN }}"
